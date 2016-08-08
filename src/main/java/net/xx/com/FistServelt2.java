@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 
-public class FistServelt extends HttpServlet{
+public class FistServelt2 extends HttpServlet{
 	/**
 	 * 
 	 */
@@ -23,7 +23,6 @@ public class FistServelt extends HttpServlet{
 		/*PrintStream p = new PrintStream(resp.getOutputStream());
 		p.print("ddf");*/
 	}
-	
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
 	 */
@@ -39,31 +38,14 @@ public class FistServelt extends HttpServlet{
 		System.out.println("88888888888888");
 		try {
 			PrintStream ps=new PrintStream(resp.getOutputStream());
-			resp.setContentType("text/html;charSet=GBK");
-			ps.print("sb");
+			ps.print("db");
+			resp.sendRedirect("www.baidu.com");
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println("a"+e.toString());
 		}
 		
+		
+		System.out.println("99999999999999");
 	}
-	/* (non-Javadoc)
-	 * @see javax.servlet.GenericServlet#init()
-	 */
-	@Override
-	public void init() throws ServletException {
-		// TODO Auto-generated method stub
-		super.init();
-		System.out.println("init");
-	}
-	/* (non-Javadoc)
-	 * @see javax.servlet.GenericServlet#destroy()
-	 */
-	@Override
-	public void destroy() {
-		// TODO Auto-generated method stub
-		super.destroy();
-		System.out.println("destroy");
-	}
-	
 }
